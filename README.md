@@ -1,2 +1,0 @@
-# weixin-app
-wxApp
