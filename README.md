@@ -1,2 +1,3 @@
 # weixin-app
-wxApp
+wxAppdemo2
+
