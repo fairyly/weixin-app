@@ -1,0 +1,35 @@
+<view class="cal-content">
+    <view class="cal-header">计算器</view>
+    <view class="cal-container">
+       {{result}}
+    </view>
+    <view class="btngroup">
+        <view class="item green" bindtap="add" id="{{id1}}">+</view>
+        <view class="item green" bindtap="add" id="{{id2}}">+/-</view>
+        <view class="item green" bindtap="add" id="{{id3}}">回退</view>
+        <view class="item green" bindtap="add" id="{{id4}}">清除</view>
+    </view>
+    <view class="btngroup">
+        <view class="item green" bindtap="add" id="{{id5}}">-</view>
+        <view class="item green" bindtap="add" id="{{id6}}">7</view>
+        <view class="item green" bindtap="add" id="{{id7}}">8</view>
+        <view class="item green" bindtap="add" id="{{id8}}">9</view>
+    </view>
+    <view class="btngroup">
+        <view class="item green" bindtap="add" id="{{id9}}">*</view>
+        <view class="item green" bindtap="add" id="{{id10}}">4</view>
+        <view class="item green" bindtap="add" id="{{id11}}">5</view>
+        <view class="item green" bindtap="add" id="{{id12}}">6</view>
+    </view>
+    <view class="btngroup">
+        <view class="item green" bindtap="add" id="{{id13}}">/</view>
+        <view class="item green" bindtap="add" id="{{id14}}">1</view>
+        <view class="item green" bindtap="add" id="{{id15}}">2</view>
+        <view class="item green" bindtap="add" id="{{id16}}">3</view>
+    </view>
+    <view class="btngroup">
+        <view class="item green" bindtap="add" id="{{id17}}">=</view>
+        <view class="item green" bindtap="add" id="{{id18}}">.</view>
+        <view class="item green zero" bindtap="add" id="{{id19}}">0</view>
+    </view>
+</view>
