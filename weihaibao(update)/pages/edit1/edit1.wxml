@@ -1,0 +1,32 @@
+<view class="edit1">
+    <view class="edit1-con">
+        <view class="edit1-con1">
+            <view class="edit1-con1img">
+                <image src="{{imgsrc1}}"></image>
+            </view>
+        </view>
+        <view class="edit1-con2">
+            <p contenteditable="true" class="edit1-con2p1">红领巾</p>
+            <p contenteditable="true" class="edit1-con2p2">红领巾联盟商店</p>
+            <p contenteditable="true" class="edit1-con2p3">HONGLINGJIN LIANMENG SHOP</p>
+        </view>
+        <view class="edit1-con3">
+            <label>微信</label>
+            <p contenteditable="true">wx888888</p>
+            <label>QQ</label>
+            <p contenteditable="true">88888888</p>
+            <label>电话</label>
+            <p contenteditable="true">18888888888</p>
+            <image src="{{imgsrc2}}"></image>
+        </view>
+        <view class="up1">
+            <image src="/images/upload.png" bindtap="up"></image>
+        </view>
+        <view class="up2">
+            <image src="/images/upload.png" bindtap="up2"></image>
+        </view>
+    </view>
+    <view class="create">
+        <button type="primary" bindtap="create">生成图片</button>
+    </view>
+</view>

@@ -1,15 +1,12 @@
-﻿{
+{
   "pages":[
     "pages/index/index",
-    "pages/edit/edit1",
-    "pages/edit/edit2",
-    "pages/edit/edit3",
+    "pages/edit1/edit1",
     "pages/more/more",
     "pages/more/more2",
     "pages/more/more3",
     "pages/more/more4",
     "pages/more/more5",
-    
     "pages/logs/logs"
   ],
   "tabBar": {
