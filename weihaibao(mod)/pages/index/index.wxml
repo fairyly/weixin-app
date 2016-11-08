@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="index">
+  <swiper class="swipercon" indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                <image src="{{item.src}}" class="slide-image" id="{{item.id}}" bindtap="edit" />
+                </swiper-item>
+            </block>
+  </swiper>
+  <view class="morepage">
+    <button type="primary" class="btn-index" bindtap="morepage">更多海报模板</button>
+  </view>
+</view>

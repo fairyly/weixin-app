@@ -1,0 +1,37 @@
+<view class="edit1">
+    <view class="edit1-con" wx:if="{{show}}">
+        <view class="edit1-con1">
+            <view class="edit1-con1img">
+                <image src="{{imgsrc1}}"></image>
+            </view>
+        </view>
+        <view class="edit1-con2">
+            <p contenteditable="true" class="edit1-con2p1" bindtap="input1">{{p1}}</p>
+            <p contenteditable="true" class="edit1-con2p2">{{p2}}</p>
+            <p contenteditable="true" class="edit1-con2p3">{{p3}}</p>
+        </view>
+        <view class="edit1-con3">
+            <label>{{p4}}</label>
+            <p contenteditable="true">{{p5}}</p>
+            <label>{{p6}}</label>
+            <p contenteditable="true">{{p7}}</p>
+            <label>{{p8}}</label>
+            <p contenteditable="true">{{p9}}</p>
+            <image src="{{imgsrc2}}"></image>
+        </view>
+        <view class="up1">
+            <image src="/images/upload.png" bindtap="up"></image>
+        </view>
+        <view class="up2">
+            <image src="/images/upload.png" bindtap="up2"></image>
+        </view>
+    </view>
+    <canvas canvas-id="1" wx:if="{{flag}}"/>
+    <view class="create">
+        <button type="primary" bindtap="create">生成图片</button>
+    </view>
+    <view class="fixedinput" wx:if="{{p1input}}">
+        <input bindinput="bindKeyInput1" type="text" value="{{p1}}" maxlength='10'auto-focus="{{aufocus}}" />
+        <button size="mini" type="primary" bindtap="confirm">确定</button>
+    </view>
+</view>
