@@ -1,0 +1,12 @@
+<view class="test">
+    <view class="main">ggg</view>
+    
+</view>
+<view class="testfoot">
+    <view class="footinput">
+        <input type="text" value="test"/>
+    </view>
+    <view class="footbtn">
+        <button size="mini" type="primary" bindtap="confirm1">确定</button>
+    </view>   
+</view>
