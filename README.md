@@ -10,8 +10,8 @@ git切换分支error: pathspec 'demo2' did not match any file(s) known to git.
         2、执行git branch demo2可以看到demo2分支（已经更新分支信息）  
         3、切换分支git checkout demo2  
 
-  
-  git pull:取回远程主机某个分支的更新,再与本地的指定分支合并;;
+>  
+     git pull:取回远程主机某个分支的更新,再与本地的指定分支合并;;  
             从远程拉到本地并且合并相当于先fetch再merge
   
 ---
