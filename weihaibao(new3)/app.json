@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/more/more",
+    "pages/more/more2",
+    "pages/edit1/edit1",
+    "pages/edit1/test",
+    "pages/edit2/edit2",
+    "pages/more/more3",
+    "pages/more/more4",
+    "pages/more/more5",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#999999",  
+    "selectedColor": "#09bb07",  
+    "borderStyle":"white",  
+    "list": [{
+        "selectedIconPath": "images/111.png",  
+        "iconPath": "images/11.png",  
+        "pagePath": "pages/more/more5",
+        "text": "水印"
+        },
+        {
+        "selectedIconPath": "images/222.png",  
+        "iconPath": "images/22.png", 
+        "pagePath": "pages/more/more",
+        "text": "名片"
+        },
+        {
+        "selectedIconPath": "images/333.png",  
+        "iconPath": "images/33.png", 
+        "pagePath": "pages/more/more2",
+        "text": "培训"
+        },
+        {
+        "selectedIconPath": "images/444.png",  
+        "iconPath": "images/44.png", 
+        "pagePath": "pages/more/more3",
+        "text": "招商"
+        },
+        {
+        "selectedIconPath": "images/555.png",  
+        "iconPath": "images/55.png", 
+        "pagePath": "pages/more/more4",
+        "text": "趣图"
+        }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "微商海报",
+    "navigationBarTextStyle":"white"
+  }
+}
