@@ -1,0 +1,20 @@
+  
+<scroll-view class="more" scroll-y="true" scroll-top="0" style="height: 2000px;"  bindscrolltoupper="scrolltop" bindscrolltolower="lower" bindscroll="scroll">
+    <view class="more-content">
+        <ul class="more-contentul" >
+            <view>{{date}}</view>
+            <view>Content</view>
+            <li wx:for="{{moreImg}}">
+                <image src="{{item.src}}" mode="aspectFit" id="{{item.id}}" bindtap="edit"></image>
+                <view>ggggggggg</view>
+            </li>
+        </ul>
+    </view>
+</scroll-view>
+<view style="text-align:center">
+    <view bindtap="loadmore" hidden="{{loadhidden}}">加载更多</view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+        加载中...
+    </loading>
+</view>
+
