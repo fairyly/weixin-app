@@ -1,0 +1,93 @@
+<view class="watermark">
+    <view id="add" class="add" hidden="{{hiddenstep1}}">
+          <image src="/images/step0.png" bindtap="uploadpic"></image>
+    </view>
+    <view class="addsteptwo" hidden="{{hiddenstep2}}">
+          <view class="markmain" id="markmain">
+            <image mode="aspectFit" id="addpic" src="{{imgsrc}}"/>
+          </view>
+          <view hidden="{{hiddenlistmark}}" class="mod-mark listarea" id="{{listid}}">
+            <view class="listwrap">
+               <view style="position:absolute;width:100%;text-align:center;">
+                 <image mode="aspectFit" src="{{listsrc}}"/>
+               </view>
+               <text style="position:absolute;width: 100%;height:2.104rem;line-height:2.104rem;left:0rem;top:3.887rem;color:{{listcolor}};text-align:center;">{{listtext}}</text>
+               <p style="position:absolute;left:0rem;top:5.50282rem;width:100%;height:1.5134rem;line-height:1.5134rem;color:{{listcolor}};text-align:center;" class="listpimg"><image style="width:20px;height:20px;" src="/images/icons_wechat_{{colors}}.png"/>{{listp}}</p>
+                
+            </view>
+               
+          </view>
+          <view id="addmark" class="addmark" wx:if="{{hiddenstep21}}">
+            <button  type="primary" bindtap="addmark">添加水印</button>
+          </view>
+          <view id="shengchengmark" class="shengchengmark" wx:if="{{hiddenstep22}}">
+            <button  type="primary" bindtap="createmark">生成</button>
+          </view>
+    </view>
+    <view class="masklist" id="masklist" hidden="{{hiddenstep3}}">
+        <ul> 
+                <li data-index="0">
+                    <view class="mod-mark" bindtap="selectlist" id="list1">
+                      <view style="position:absolute;width:100%;text-align:center;">
+                        <image mode="aspectFit" src="{{list1src}}"/>
+                      </view>
+                      <text style="position:absolute;width: 100%;height:2.104rem;line-height:2.104rem;left:0rem;top:3.887rem;color:{{list1color}};text-align:center;">加水印</text>
+                      <p style="position:absolute;left:0rem;top:6.50282rem;width:100%;height:1.5134rem;line-height:1.5134rem;color:{{list1color}};text-align:center;">微信：weiyou</p>
+                    </view>
+                </li>
+            
+                <li data-index="1">
+                    <view class="mod-mark" bindtap="selectlist" id="list2">
+                      <view style="position:absolute;width: 100%;text-align:center;">
+                        <image mode="aspectFit" src="{{list2src}}"/>
+                      </view>
+                      <text style="position:absolute;width: 100%;height:2.104rem;line-height:2.104rem;left:0rem;top:2.887rem;color:{{list2color}};text-align:center;">加水印</text>
+                      <p style="position:absolute;left:0rem;top:4.6282rem;width:100%;height:1.5134rem;line-height:1.5134rem;color:{{list2color}};text-align:center;">微信：weiyou</p>
+                    </view>
+                </li>
+            
+                <li data-index="2">
+                    <view class="mod-mark" bindtap="selectlist" id="list3">
+                      <view style="position:absolute;width: 100%;text-align:center;">
+                        <image mode="aspectFit" src="{{list3src}}"/>
+                      </view>
+                      <text style="position:absolute;width: 100%;height:2.3104rem;line-height:2.3104rem;left:0rem;top:4.6499rem;color:{{list3color}};text-align:center;">加水印</text>
+                      <p style="position:absolute;left:1.05776rem;top:6.9991rem;100%;height:1.62134rem;line-height:1.62134rem;color:{{list3color}};text-align:center;">微信：weiyou</p>
+                    </view>
+                </li>
+            
+                <li data-index="3">
+                    <view class="mod-mark" bindtap="selectlist" id="list4">
+                      <view style="position:absolute;width: 100%;text-align:center;">
+                        <image mode="aspectFit" src="{{liat4src}}"/>
+                      </view>
+                      <text style="position:absolute;width: 100%;height:2.3104rem;line-height:2.3104rem;left:0rem;top:4.80767rem;color:{{list4color}};text-align:center;">加水印</text>
+                      <p style="position:absolute;left:0rem;top:6.3871rem;width:100%;height:1.62134rem;line-height:1.62134rem;color:{{list4color}};text-align:center;">微信：weiyou</p>
+                    </view>
+                </li>
+            </ul>
+    </view>
+    <view class="addstepfour" hidden="{{hiddenstep4}}">
+            <view class="markform" id="markform">
+              <input data-title="title" type="text" class="h3" placeholder="输入店铺名称（必填）" bindinput="bindshopname" />
+              <p class="h3">该水印最多勾选1个联系方式</p>
+              <view class="l {{focuswx}}" bindtap="bindselect">
+                <i class="icon"><span>√</span></i> <i class="icon1 wx"><image mode="aspectFit" src="/images/step2-icon-wx-on.png"></image></i> <input data-img="wechat" type="text" placeholder="输入微信号"/> <i class="icon2"></i>
+              </view>
+              <view class="l {{focuswd}}" bindtap="bindselect">
+                <i class="icon"><span>√</span></i> <i class="icon1 wd"><image mode="aspectFit" src="/images/step2-icon-wd-off.png"/></i> <input data-img="weidian" type="text" placeholder="输入微店号"/> <i class="icon2"></i>
+              </view>
+              <view class="l {{focustb}}">
+                <i class="icon"><span>√</span></i> <i class="icon1 taobao"><image mode="aspectFit" src="/images/step2-icon-taobao-off.png"/></i><input data-img="taobao" type="text" placeholder="输入淘宝店名"/> <i class="icon2"></i>
+              </view>
+              <view class="l {{focusqq}}">
+                <i class="icon"><span>√</span></i> <i class="icon1 qq"><image mode="aspectFit" src="/images/step2-icon-qq-off.png"/></i> <input data-img="QQ" type="text" placeholder="输入QQ号"/> <i class="icon2"></i>
+              </view>
+              <view class="l {{focuswb}}">
+                <i class="icon"><span>√</span></i> <i class="icon1 sina"><image mode="aspectFit" src="/images/step2-icon-sina-off.png"/></i> <input data-img="weibo" type="text" placeholder="输入微博号"/> <i class="icon2"></i>
+              </view>
+              <view style="height: .8rem;"></view>
+            </view>
+            <button id="create-mark" class="create-mark" type="primary">生成水印</button>
+     </view>
+</view>

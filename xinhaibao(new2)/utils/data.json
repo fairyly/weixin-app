@@ -1,0 +1,21 @@
+{
+  "list":[
+          {
+            "src":"/images/1.jpg",
+            "id":1
+          },
+          {
+            "src":"/images/f2.jpg",
+            "id":2
+          },
+          {
+            "src":"/images/f1.jpg",
+            "id":3
+          },
+          {
+            "src":"/images/f3.jpg",
+            "id":3
+          }
+    ]
+      
+}
