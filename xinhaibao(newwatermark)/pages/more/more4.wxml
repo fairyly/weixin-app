@@ -1,7 +1,0 @@
-<view class="more">
-    <view class="more-content">
-        <ul class="more-contentul" wx:for="{{moreImg}}">
-            <li><image src="{{item.src}}" id="{{item.id}}" bindtap="edit"></image></li>
-        </ul>
-    </view>
-</view>
