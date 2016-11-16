@@ -1,0 +1,83 @@
+<view class="edit1">
+    <view class="edit1-con" wx:if="{{show}}">
+        <view class="edit1-con1">
+            <view class="edit1-con1img">
+                <image src="{{imgsrc1}}" style="left:{{newleft}}px;top:{{newtop}}px;" bindtouchstart="touchstart" bindtouchmove="touchmove"></image>
+            </view>
+        </view>
+        <view class="edit1-con2">
+            <p contenteditable="true" class="edit1-con2p1" bindtap="input1">{{p1}}</p>
+            <p contenteditable="true" class="edit1-con2p2" bindtap="input2">{{p2}}</p>
+            <p contenteditable="true" class="edit1-con2p3" bindtap="input3">{{p3}}</p>
+        </view>
+        <view class="edit1-con3">
+            <label>{{p4}}</label>
+            <p contenteditable="true" bindtap="input5">{{p5}}</p>
+            <label>{{p6}}</label>
+            <p contenteditable="true" bindtap="input7">{{p7}}</p>
+            <label>{{p8}}</label>
+            <p contenteditable="true" bindtap="input9">{{p9}}</p>
+            <image src="{{imgsrc2}}"></image>
+        </view>
+        <view class="up1">
+            <image src="/images/upload.png" bindtap="up"></image>
+        </view>
+        <view class="up2">
+            <image src="/images/upload.png" bindtap="up2"></image>
+        </view>
+    </view>
+    <canvas canvas-id="1" wx:if="{{flag}}"/>
+    <view class="showimg" wx:if="{{imgsave}}">
+        <image src="{{showimg}}" style="width:100%;height:647px"/>
+    </view>
+    <view class="create">
+        <button type="primary" bindtap="create" wx:if="{{createpic1}}">生成图片</button>
+        <button type="primary" bindtap="savefile" wx:if="{{savepic1}}">保存</button>
+    </view>
+    <view wx:if="{{p1input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput1" type="text" value="{{p1}}" maxlength='10'auto-focus="{{aufocus1}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm1">确定</button>
+        </view>
+    </view>
+    <view wx:if="{{p2input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput2" type="text" value="{{p2}}" maxlength='10'auto-focus="{{aufocus2}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm2">确定</button>
+        </view>
+    </view>
+    <view wx:if="{{p3input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput3" type="text" value="{{p3}}" maxlength='25'auto-focus="{{aufocus3}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm3">确定</button>
+        </view>
+    </view>
+    <view wx:if="{{p5input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput5" type="text" value="{{p5}}" maxlength='25'auto-focus="{{aufocus5}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm5">确定</button>
+        </view>
+    </view>
+    <view wx:if="{{p7input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput7" type="text" value="{{p7}}" maxlength='15'auto-focus="{{aufocus7}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm7">确定</button>
+        </view>
+    </view>
+    <view wx:if="{{p9input}}" class="fixbottom">
+        <view class="fixedinput" >
+            <view class="inputborder"><input bindinput="bindKeyInput9" type="text" value="{{p9}}" maxlength='15'auto-focus="{{aufocus9}}" />
+            </view>
+            <button size="mini" type="primary" bindtap="confirm9">确定</button>
+        </view>
+    </view>
+    <!--<view>{{event}},</view>
+    <view>{{distanceX}},{{distanceY}},{{newleft}},{{newtop}}</view>-->
+    <!--<view>{{xMove}},{{yMove}},{{distance}},{{filesave}}</view>-->
+    
+</view>
