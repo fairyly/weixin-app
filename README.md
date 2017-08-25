@@ -2,19 +2,22 @@
 wxApp
 
 >
-本地切换分支报错解决方法： 
-git切换分支error: pathspec 'demo2' did not match any file(s) known to git.   
-新建了分支：demo2,但是本地 git checkout demo2就报个错误，    
-解决方法：  
-        1、执行命令git fetch取回所有分支的更新  
-        2、执行git branch demo2可以看到demo2分支（已经更新分支信息）  
-        3、切换分支git checkout demo2  
+
 
 >  
-     git pull:取回远程主机某个分支的更新,再与本地的指定分支合并;;  
-            从远程拉到本地并且合并相当于先fetch再merge
+
   
 ---
 
 
 git pull --rebase 拉取远程分支与本地分支合并  常用
+
+
+# 微信小程序
+
+* app.globalData.userInfo: 使用全局属性;
+* getcurrentpages(): 获取页面栈;
+  - 页面栈以栈（先进后出）的形式维护页面与页面之间的关系；  
+  - 小程序提供了getCurrentPages()函数获取页面栈，第一个元素为首页，最后一个元素为当前页面。
+* setData() : 函数用于将数据从逻辑层发送到视图层，同时改变对应的this.data,
+  - 坑：直接修改 this.data 无效，无法改变页面的状态，还会造成数据不一致
