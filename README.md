@@ -15,3 +15,6 @@ git切换分支error: pathspec 'demo2' did not match any file(s) known to git.
             从远程拉到本地并且合并相当于先fetch再merge
   
 ---
+
+
+git pull --rebase 拉取远程分支与本地分支合并  常用
