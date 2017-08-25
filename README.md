@@ -5,7 +5,33 @@ wxApp
 
 
 >  
+## issue
 
+- 除了官方给出的问题，像脚本内不能使用window等对象，
+    
+- 不能使用jquery、zepto框架、一个应用同时只能打开5个页面，
+
+- 当已经打开了5个页面之后，wx.navigateTo不能正常打开新页面。
+
+- 请避免多层级的交互方式，或者使用wx.redirectTo、样式表不支持级联选择器，
+  - 一个应用同时只能打开5个页面，当已经打开了5个页面之后，wx.navigateTo不能正常打开新页面。请避免多层级的交互方式，或者使用wx.redirectTo
+
+- WXSS支持以.开始的类选择器；
+
+- background-image：可以使用网络图片，或者 base64，或者使用<image/>标签
+- 使用 page 标签选择器，可以修改顶层节点的样式
+  ```
+  page {
+    display: block;
+    min-height: 100%;
+    background-color: red;
+  }
+  ```
+
+- map、canvas、video、textarea 是由客户端创建的原生组件，原生组件的层级是最高的，
+  所以页面中的其他组件无论设置 z-index 为多少，都无法盖在原生组件上。 
+  原生组件暂时还无法放在 scroll-view 上，也无法对原生组件设置 css 动画。
+  
   
 ---
 
