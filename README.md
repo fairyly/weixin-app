@@ -27,3 +27,12 @@ hello  小程序
     前端地址：https://github.com/xupp/xiaochengxu  
     前端地址：https://github.com/xupp/xiaochengxu  
   - [小程序支付详解+源码(客户端+服务端)](http://www.wxapp-union.com/article-2516-1.html)
+  
+  
+* 关键字(需要在双引号之内)
+  - true：boolean 类型的 true，代表真值。
+
+  - false： boolean 类型的 false，代表假值。
+
+  - <checkbox checked="{{false}}"> </checkbox>
+  - 特别注意：不要直接写 checked="false"，其计算结果是一个字符串，转成 boolean 类型后代表真值。
