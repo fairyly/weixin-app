@@ -34,3 +34,24 @@ hello  小程序
   - false： boolean 类型的 false，代表假值。
   - `<checkbox checked="{{false}}"> </checkbox>`
   - 特别注意：不要直接写 checked="false"，其计算结果是一个字符串，转成 boolean 类型后代表真值。
+
+
+* 修改数组的参数值
+  ```
+  babyInfo2: [
+      {
+        "sex": "男",
+        "gender": 1
+      },
+      {
+        "sex": "女",
+        "gender": 2
+      },
+    ]
+    
+  var gend = "babyInfo2["+index+"].gender";
+  that.setData({
+    [gend]: 2
+  })
+  ```
+  
