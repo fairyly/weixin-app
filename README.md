@@ -66,3 +66,29 @@ hello  小程序
     </view>
   </view>
   ```
+
+* 页面参数传递方法
+  - 跳转 带参数使用 ?
+    wx.navigateTo({url:'/pages/xiangqing/xiangqing?id=上一页的参数'}) 
+    onLoad:function(options){   
+     // 页面初始化 options为页面跳转所带来的参数   
+     this.setData({   
+        title:options.id   
+     })   
+  - wx.setStorage 或者 wx.serStorageSync
+  - 
+
+* 模板使用 WXML 提供模板（template） 只能使用data传入的数据
+  ```
+  <template/>内定义代码片段
+  <template name="msgItem">
+    <view>
+      <text> {{index}}: {{msg}} </text>
+      <text> Time: {{time}} </text>
+    </view>
+  </template>
+  
+  使用模板:
+  <import src="../WXtemplate/headerTemplate.wxml"/> 
+  <template is="msgItem" data="{{...item}}"/>
+  ```
