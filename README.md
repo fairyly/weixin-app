@@ -68,7 +68,7 @@ hello  小程序
   ```
 
 * 页面参数传递方法
-  - 跳转 带参数使用 ?
+  - 跳转 带参数使用 ?  
     wx.navigateTo({url:'/pages/xiangqing/xiangqing?id=上一页的参数'}) 
     onLoad:function(options){   
      // 页面初始化 options为页面跳转所带来的参数   
