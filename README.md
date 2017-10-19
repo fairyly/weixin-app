@@ -92,3 +92,8 @@ hello  小程序
   <import src="../WXtemplate/headerTemplate.wxml"/> 
   <template is="msgItem" data="{{...item}}"/>
   ```
+
+
+* 设置 data-xxx 的方法来标识要传递的值
+  获取用  
+  e.currentTarget.dataset.xxx  
