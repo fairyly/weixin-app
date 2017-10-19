@@ -76,7 +76,7 @@ hello  小程序
      this.setData({   
         title:options.id   
      })   
-  - wx.setStorage 或者 wx.serStorageSync
+  - wx.setStorage 或者 wx.serStorageSync
   - 
 
 * 模板使用 WXML 提供模板（template） 只能使用data传入的数据
