@@ -56,11 +56,12 @@ hello  小程序
   ```
   
 * wx:for 嵌套，需要设置 wx:for-item 下边是一个九九乘法表
+
   ```
   <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
     <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
       <view wx:if="{{i <= j}}">
-        {{i}} * {{j}} = {{i * j}}
+         {{i}} * {{j}} = {{i * j}}
       </view>
     </view>
   </view>
