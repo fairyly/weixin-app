@@ -100,7 +100,22 @@ hello  小程序
   获取用  
   e.currentTarget.dataset.xxx  
 
-* 微信小程序图片实现宽度100%，高度自适应
+* 微信小程序图片实现宽度100%，高度自适应,mode 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
   ```
   <image src='/images/store-pic.png' style='width:100%;' mode="widthFix"></image>
+  ```
+
+* 页面栈
+  navigator 先进后出，如果使用wx.navigateTo()方法跳转页面 会将跳转之前的页面压倒页面栈之中  
+  使用navigateBack（）方法会将栈首页面出栈，直到目标页面出栈。值得注意的是页面栈的容量是五个  
+  edirectTo()这个方法不会将自己的页面压倒栈内，从而就不会允许将之前访问过的页面从栈中返回出来  
+  使用wx.navigateTo接口跳转,原页面保留。  
+  使用wx.redirectTo接口跳转，关闭原页面,不能返回
+  
+  ```
+  1.小程序启动，初始化第一个页面
+  2.打开新页面，调用 API wx.navigateTo 或使用<navigator />组件
+  3.页面重定向，调用 API wx.redirectTo 或使用<navigator />组件
+  4.页面返回，调用 API wx.navigateBack或用户按左上角返回按钮
+  5.tarbar切换
   ```
