@@ -106,14 +106,13 @@ hello  小程序
   <image src='/images/store-pic.png' style='width:100%;' mode="widthFix"></image>
   ```
 
-* 页面栈 
-
-  [小程序页面路由](http://www.cnblogs.com/nosqlcoco/p/6195572.html)  
-  navigator 先进后出，如果使用wx.navigateTo()方法跳转页面 会将跳转之前的页面压倒页面栈之中   
-  使用navigateBack（）方法会将栈首页面出栈，直到目标页面出栈。值得注意的是页面栈的容量是五个   
-  edirectTo()这个方法不会将自己的页面压倒栈内，从而就不会允许将之前访问过的页面从栈中返回出来   
-  使用wx.navigateTo接口跳转,原页面保留。   
-  使用wx.redirectTo接口跳转，关闭原页面,不能返回  
+* 页面栈  
+  - [小程序页面路由](http://www.cnblogs.com/nosqlcoco/p/6195572.html)   
+  - navigator 先进后出，如果使用wx.navigateTo()方法跳转页面 会将跳转之前的页面压倒页面栈之中    
+  - 使用navigateBack（）方法会将栈首页面出栈，直到目标页面出栈。值得注意的是页面栈的容量是五个   
+  - edirectTo()这个方法不会将自己的页面压倒栈内，从而就不会允许将之前访问过的页面从栈中返回出来   
+  - 使用wx.navigateTo接口跳转,原页面保留。   
+  - 使用wx.redirectTo接口跳转，关闭原页面,不能返回   
   
   ```
   1.小程序启动，初始化第一个页面
