@@ -99,3 +99,8 @@ hello  小程序
 
   获取用  
   e.currentTarget.dataset.xxx  
+
+* 微信小程序图片实现宽度100%，高度自适应
+  ```
+  <image src='/images/store-pic.png' style='width:100%;' mode="widthFix"></image>
+  ```
