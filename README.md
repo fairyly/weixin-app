@@ -124,3 +124,6 @@ hello  小程序
 
 * scroll-view 的 bindscrolltolower=""事件 下拉加载更多时bindscrolltolower多次执行
   - 将lower-threshold属性设为0或者1或者很小的值，就可以只加载一次 因为小程序更新后lower-threshold的默认值是50 超过50之后就会多次触发
+
+
+* input 后添加删除 清除内容后失去焦点,键盘收起
