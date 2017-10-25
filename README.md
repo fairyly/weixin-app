@@ -121,6 +121,6 @@ hello  小程序
   4.页面返回，调用 API wx.navigateBack或用户按左上角返回按钮
   5.tarbar切换
   ```
-* scroll-view 的 bindscrolltolower=""事件 下拉加载更多时bindscrolltolower多次执行
 
+* scroll-view 的 bindscrolltolower=""事件 下拉加载更多时bindscrolltolower多次执行
   - 将lower-threshold属性设为0或者1或者很小的值，就可以只加载一次 因为小程序更新后lower-threshold的默认值是50 超过50之后就会多次触发
