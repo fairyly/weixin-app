@@ -120,6 +120,19 @@ hello  小程序
   3.页面重定向，调用 API wx.redirectTo 或使用<navigator />组件
   4.页面返回，调用 API wx.navigateBack或用户按左上角返回按钮
   5.tarbar切换
+  
+  从页面路由栈中直接获取和操作目标Page对象
+  这种方式，是通过调用小程序的API: getCurrentPages()，来获取当前页面路由栈的信息，
+  这个路由栈中按照页面的路由顺序存放着相应的Page对象，我们可以很容易的获取到上一级页面的完整Page对象，
+  从而使直接调用Page对象的属性和方法成为可能。
+  如下所示：
+  var pages = getCurrentPages();
+  var currPage = pages[pages.length - 1]; //当前页面
+  var prevPage = pages[pages.length - 2]; //上一个页面
+  //直接调用上一个页面的setData()方法，
+  把数据存到上一个页面中去prevPage.setData({ mydata: {a:1, b:2}})
+  比起全局数据存储的方式，这种方式在逻辑上要清晰得多，也不存在对数据的销毁有额外的管理工作。
+
   ```
 
 * scroll-view 的 bindscrolltolower=""事件 下拉加载更多时bindscrolltolower多次执行
