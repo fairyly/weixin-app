@@ -164,3 +164,50 @@ hello  小程序
          value='{{item.input}}' bindtap='setfocus' />
       </view>
     ```
+
+* 商品属性分类判断选择
+  
+  ```
+  <view class="classname" wx:for="{{salePropList}}" wx:key="index">
+          <view class="chose-size-item-title">{{item.propName}}</view>
+          <view class="chose-size-detail-list">
+            <view wx:for="{{item.skuAttrList}}" wx:for-item="itemlist" class="chose-size-detail-item {{item.attrValueStatus[idx] ? (item.selectvalue == itemlist.value ? 'active':''): ''}}" wx:for-index="idx" data-selectedvalue="{{item.selectedValue}}" data-status="{{item.attrValueStatus[idx]}}" data-value="{{itemlist.value}}" data-key="{{itemlist.key}}" data-index='{{index}}' data-num='{{idx}}' bindtap="chosegoods">{{itemlist.value}}</view>
+          </view>
+        </view>
+        
+        chosegoods: function(e) {
+    var that = this
+    var salelists = that.data.salePropList //获取当前列表
+    var selectattrlist = [] //获取已经选择属性列表
+    var selectkeylist = [] //获取已经选择分类的 key 列表
+    var skumap = that.data.skuMap //获取 skumap 对象
+
+    var key = e.currentTarget.dataset.key //获取当前 key
+    var index = e.currentTarget.dataset.index //当前分类索引
+    var catenum = e.currentTarget.dataset.num //当前分类中的字段索引
+
+    var value = e.currentTarget.dataset.value //当前分类字段的值
+    var selectedvalue = e.currentTarget.dataset.selectedvalue //当前分类选择的值
+    var status = e.currentTarget.dataset.status //当前分类中字段的选择状态
+    console.log(index,key,value,selectedvalue,catenum)
+
+    //设置列表中 attrValueStatus 中字段的状态和分类中选择值
+    salelists[index].attrValueStatus[catenum] = true
+    salelists[index].selectvalue = value
+    salelists[index].selectkey = key
+    that.setData({
+        salePropList: salelists
+    })
+    console.log("selsalePropList",that.data.salePropList)
+    that.data.salePropList.forEach(function(el,key){
+      selectattrlist.push(el.selectvalue) //把选择的值加入选择列表
+      selectkeylist.push(el.selectkey) //把选择的 key 加入选择 key 列表
+    })
+    console.log("selectattrlist",selectattrlist)
+    console.log("selectkeylist",selectkeylist)
+    that.setData({
+        selectattrlist: selectattrlist, //更新页面渲染
+        selectkeylist: selectkeylist
+    })
+    //计算价格和库存,显示对应图片
+  ```
