@@ -167,7 +167,7 @@ hello  小程序
 
 * 商品属性分类判断选择
   
-  ```
+  ```
   <view class="classname" wx:for="{{salePropList}}" wx:key="index">
           <view class="chose-size-item-title">{{item.propName}}</view>
           <view class="chose-size-detail-list">
