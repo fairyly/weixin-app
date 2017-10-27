@@ -140,3 +140,9 @@ hello  小程序
 
 
 * input 后添加删除 清除内容后失去焦点,键盘收起
+* wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面
+* 不要在onLaunch的时候调用getCurrentPages()，app 还没有生成 ** 注意：不要尝试修改页面栈，会导致路由以及页面状态错误。**
+  - getCurrentPages() 函数用于获取当前页面栈的实例，以数组形式按栈的顺序给出
+  - onLoad:页面加载 一个页面只会调用一次
+  - onShow:页面显示 每次打开页面都会调用 一次
+
