@@ -149,13 +149,18 @@ hello  小程序
 
 * 输验证码自动跳下一个原理：四个 input 输入框显示
   - 采用分层原理，上层只做显示层，下层做数据输入层，下层 input 聚焦，上层 input 显示输入的数字
-    ```
+  
+    ```
       <view class='hideinput'>
         <input type='number' name="" focus='{{bottomview}}' auto-focus='{{bottomview}}' bindinput='textinput' value='{{inputtxtnum}}'/>
       </view>
-  <view class='fill-code' bindtap='setfocus' style='height:{{winHeight}}px;padding:0 {{padding}}px'>
-    <view class='title'><text>验证码已发送至手机:</text><text class='number'>{{phoneNumber}}</text></view>
-    <view class='code' bindtap='setfocus'>
-      <input wx:for='{{inputlist}}' wx:key='{{index}}' style="width:{{width}}px;height:{{px}};font-size:{{fz}}px;font-family:UICTFontTextStyleBody;pointer-events:none;" data-index='{{index}}' maxlength='1' type='number' placeholder-style='color:#000;font-size:40px;font-family:UICTFontTextStyleBody;'  class="{{fucusnum == item.key? 'focus' : ''}}"   placeholder='' disabled='{{true}}'  value='{{item.input}}' bindtap='setfocus' /><!--focus='{{fucusnum == item.key? true: false}}'bindfocus='inputfocus'bindinput='inputnum'{{reasonable == false? true:false}}-->
-    </view>
+      <view class='fill-code' bindtap='setfocus' style='height:{{winHeight}}px;padding:0 {{padding}}px'>
+        <view class='title'><text>验证码已发送至手机:</text><text class='number'>{{phoneNumber}}</text></view>
+        <view class='code' bindtap='setfocus'>
+        <input wx:for='{{inputlist}}' wx:key='{{index}}' style="width:{{width}}px;height:{{px}};font-size:{{fz}}px;
+         font-family:UICTFontTextStyleBody;pointer-events:none;" data-index='{{index}}' maxlength='1' type='number'
+         placeholder-style='color:#000;font-size:40px;font-family:UICTFontTextStyleBody;'  
+         class="{{fucusnum == item.key? 'focus' : ''}}"   placeholder='' disabled='{{true}}'  
+         value='{{item.input}}' bindtap='setfocus' />
+      </view>
     ```
