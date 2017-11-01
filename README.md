@@ -216,3 +216,6 @@ hello  小程序
 
 * 小程序 人民币符号不显示(部分手机)
   - ¥  —> ￥
+
+* 连续点击小程序的 <navigator> 出现如下错误: navigateBack with an unexist webviewId
+  手机上没有出现
