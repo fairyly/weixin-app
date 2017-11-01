@@ -5,6 +5,7 @@
 hello  小程序
 
 * [微信小程序开源推荐](https://developers.weixin.qq.com/home?action=list_recommendblog&page=1&limit=10&lang=zh_CN&token=)
+* [基于Gulp 的微信小程序前端开发工作流 ](https://github.com/Jeff2Ma/WeApp-Workflow)
 
 * [微信小程序联盟](http://www.wxapp-union.com/)
 
