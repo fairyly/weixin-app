@@ -9,7 +9,7 @@ hello  小程序
 
 * [微信小程序联盟](http://www.wxapp-union.com/)
 
-
+* openToolsLog 查看开发工具日志
 >>> study  ......
 
 
