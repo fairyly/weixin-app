@@ -222,3 +222,9 @@ hello  小程序
 
 * 连续点击小程序的 <navigator> 出现如下错误: navigateBack with an unexist webviewId
   手机上没有出现
+  
+* 小程序弹窗禁止底部内容滚动 
+  ```
+  catchtouchmove="preventTouchMove"
+  为什么是空方法？因为要结合界面wxml看，蒙层view里有一个事件绑定catchtouchmove="preventTouchMove"。这样写的原因是阻断事件向下传递，避免在弹窗后还  可以点击或者滑动蒙层下的界面
+  ```
