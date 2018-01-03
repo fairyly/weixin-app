@@ -228,3 +228,9 @@ hello  小程序
   catchtouchmove="preventTouchMove"
   为什么是空方法？因为要结合界面wxml看，蒙层view里有一个事件绑定catchtouchmove="preventTouchMove"。这样写的原因是阻断事件向下传递，避免在弹窗后还  可以点击或者滑动蒙层下的界面
   ```
+* 看起来是 wxss 失效？请尝试以下操作：
+```
+  1. 在开发者工具调试器中输入openVendor并回车；
+  2. 开发者工具会打开一个文件夹，请删除这个文件夹下的所有文件；
+  3. 关闭并重启开发者工具，看看这个问题是否还存在。
+```
