@@ -58,6 +58,14 @@ hello  小程序
   that.setData({
     [gend]: 2
   })
+  
+  或者
+  
+  this.setData({
+    'array[0].text':'changed data',
+    'object.text': 'changed data'
+  })
+  
   ```
   
 * wx:for 嵌套，需要设置 wx:for-item 下边是一个九九乘法表  
