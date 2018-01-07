@@ -12,6 +12,7 @@ hello  小程序
 * openToolsLog 查看开发工具日志
 
   - 任意聊天窗口输入 //uplog 会上传日志
+  - open
 >>> study  ......
 
 
@@ -32,7 +33,8 @@ hello  小程序
     前端地址：https://github.com/xupp/xiaochengxu  
     前端地址：https://github.com/xupp/xiaochengxu  
   - [小程序支付详解+源码(客户端+服务端)](http://www.wxapp-union.com/article-2516-1.html)
-  
+
+* 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
 * 关键字(需要在双引号之内)
   - true：boolean 类型的 true，代表真值。
@@ -236,7 +238,7 @@ hello  小程序
   catchtouchmove="preventTouchMove"
   为什么是空方法？因为要结合界面wxml看，蒙层view里有一个事件绑定catchtouchmove="preventTouchMove"。这样写的原因是阻断事件向下传递，避免在弹窗后还  可以点击或者滑动蒙层下的界面
   ```
-* 看起来是 wxss 失效？请尝试以下操作：
+* wxss 失效？请尝试以下操作：
 ```
   1. 在开发者工具调试器中输入openVendor并回车；
   2. 开发者工具会打开一个文件夹，请删除这个文件夹下的所有文件；
