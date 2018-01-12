@@ -42,6 +42,20 @@ hello  小程序
   - `<checkbox checked="{{false}}"> </checkbox>`
   - 特别注意：不要直接写 checked="false"，其计算结果是一个字符串，转成 boolean 类型后代表真值。
 
+* 设置全局
+```
+window
+用于设置小程序的状态栏、导航条、标题、窗口背景色。
+
+属性	类型	默认值	描述
+navigationBarBackgroundColor	HexColor	#000000	导航栏背景颜色，如"#000000"
+navigationBarTextStyle	String	white	导航栏标题颜色，仅支持 black/white
+navigationBarTitleText	String		导航栏标题文字内容
+backgroundColor	HexColor	#ffffff	窗口的背景色
+backgroundTextStyle	String	dark	下拉背景字体、loading 图的样式，仅支持 dark/light
+enablePullDownRefresh	Boolean	false	是否开启下拉刷新，详见页面相关事件处理函数。
+onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部距离，单位为px
+```
 
 * 修改数组的参数值 (或者设置对象的属性) 在使用setData()设置数组对象的某个元素的属性
   ```
