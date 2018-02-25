@@ -1,48 +1,53 @@
-//app.js
-App({
-  onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+//index.js
+//获取应用实例
+var app = getApp()
+Page({
+  data: {
+    motto: 'Hello World',
+    userInfo: {},
+    // 侧边栏
+    open: false,
+    mark: 0,
+    newmark: 0,
+    istoright:true,
+    // swiper
+    imgUrls: [
+      '../../images/banner_4.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    dotactivecolor: '#1aad19',
+    
   },
-  getUserInfo:function(cb){
+  //事件处理函数
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  onLoad: function () {
+    console.log('onLoad')
     var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
-      //调用登录接口
-      wx.login({
-        success: function () {
-          wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
-            }
-          })
-        }
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      //更新数据
+      that.setData({
+        userInfo:userInfo
       })
-    }
+    })
   },
-  globalData:{
-    userInfo:null
-  },
-  //转发
-  onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log(res.target)
-    }
-    return {
-      title: '之梦科技',
-      path: '/pages/index/index?id=123',
-      success: function(res) {
-        // 转发成功
-
-      },
-      fail: function(res) {
-        // 转发失败
-      }
+  tap_ch: function(e){
+    console.log(this.data.open);
+    if(this.data.open){
+      this.setData({
+        open : false
+      });
+    }else{
+      this.setData({
+        open : true
+      });
     }
   },
   // 跳转
@@ -111,4 +116,9 @@ App({
       url: '../news/news'
     })
   },
+  show_detail(){
+    wx.redirectTo({
+      url: '../details/details'
+    })
+  }
 })

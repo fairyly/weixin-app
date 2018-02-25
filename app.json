@@ -1,13 +1,45 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/index/test"
+    "pages/center/center",
+    "pages/about/about",
+    "pages/product/product",
+    "pages/join/join",
+    "pages/contact/contact",
+    "pages/news/news",
+    "pages/details/details",
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "test",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#11cd6e",
+    "navigationBarTitleText": "之梦",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {  
+   "color": "#777777",  
+   "selectedColor": "#11cd6e",  
+   "borderStyle":"white",  
+   "list": [{  
+     "selectedIconPath": "images/selindex.png",  
+     "iconPath": "images/index.png",  
+     "pagePath": "pages/index/index",  
+     "text": "首页"  
+   }, {  
+     "selectedIconPath": "images/selintro.png",  
+     "iconPath": "images/intro.png",  
+     "pagePath": "pages/about/about",  
+     "text": "简介"  
+   }, {  
+     "selectedIconPath": "images/selproduct.png",  
+     "iconPath": "images/product.png",  
+     "pagePath": "pages/product/product",  
+     "text": "开发"  
+   }, {  
+     "selectedIconPath": "images/selmy.png",  
+     "iconPath": "images/my.png",  
+     "pagePath": "pages/center/center",  
+     "text": "我"  
+   }]  
   }
 }

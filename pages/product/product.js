@@ -21,7 +21,6 @@ Page({
     interval: 5000,
     duration: 1000,
     dotactivecolor: '#1aad19',
-    
     markers: [{
         title:'之梦',
         content:'之梦',
@@ -29,27 +28,13 @@ Page({
         id: 0,
         latitude: 30.27455,
         longitude: 120.12211,
-        width: 60,
+        width: 50,
         height: 50,
         bgColor: '#777777',
         color: '#ffffff',
         fontSize: '13px',
         display:'ALWAYS',
-        label: {
-          color: '#01ebcb',
-          fontSize: '15px', 
-          content:'之梦',
-          x:-5,
-          y:-5
-        },
-        callout:{
-          content:'之梦',
-          color: '#ffffff',
-          fontSize: '13px',
-          borderRadius:'5px',
-          bgColor: '#777777',
-          display:'ALWAYS'
-        }
+        callout:{content:'之梦', color: '#ffffff', fontSize: '13px', borderRadius:'5px', bgColor: '#777777', display:'ALWAYS'}
     }],
     polyline: [{
       points: [{
@@ -104,82 +89,6 @@ Page({
       });
     }
   },
-
-  // tap_start:function(e){
-  //   // touchstart事件
-  //   this.data.mark = this.data.newmark = e.touches[0].pageX;
-  // },
-  // tap_drag: function(e){
-  //     // touchmove事件
-
-  //     /*
-  //      * 手指从左向右移动
-  //      * @newmark是指移动的最新点的x轴坐标 ， @mark是指原点x轴坐标
-  //      */
-  //     this.data.newmark = e.touches[0].pageX;
-  //     if(this.data.mark < this.data.newmark){
-  //       this.istoright = true;
-  //     }
-      
-  //      * 手指从右向左移动
-  //      * @newmark是指移动的最新点的x轴坐标 ， @mark是指原点x轴坐标
-       
-  //     if(this.data.mark > this.data.newmark){
-  //       this.istoright = false;
-
-  //     }
-  //     this.data.mark = this.data.newmark;
-  // },
-  // tap_end: function(e){
-  //     // touchend事件
-  //     this.data.mark = 0;
-  //     this.data.newmark = 0;
-  //     if(this.istoright){
-  //       this.setData({
-  //         open : true
-  //       });
-  //     }else{
-  //       this.setData({
-  //         open : false
-  //       });
-  //     }
-  // },
-
-  //转发
-  onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log(res.target)
-    }
-    return {
-      title: '之梦科技',
-      path: '/pages/index/index?id=123',
-      success: function(res) {
-        // 转发成功
-
-      },
-      fail: function(res) {
-        // 转发失败
-      }
-    }
-  },
-
-  //页面滚动
-  onPageScroll: function() {
-    // Do something when page scroll
-  },
-
-  //地图
-  regionchange(e) {
-    console.log(e.type)
-  },
-  markertap(e) {
-    console.log(e.markerId)
-  },
-  controltap(e) {
-    console.log(e.controlId)
-  },
-
   // 跳转
   tap_index(e) {
     this.tap_ch();
