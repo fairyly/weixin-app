@@ -1,155 +1,172 @@
-<!--index.wxml
+<!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+    <view class="index-nav">
+        <image class="nav-menu-icon" bindtap="tap_ch" src="../../images/menu.png"></image>
+        <image class="userinfo-avatar index-company-logo" src="../../images/logo.jpg" background-size="cover"></image><span>之梦</span>
+    </view>
+  <!-- <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
+  </view> -->
+  <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
-</view>-->
-<view class="page">
-    <view class="page-bottom {{open ? 'p-left' : ''}}">
-        <view class="page-content">
-            <ul  class="ul">
-                <li bindtap="tap_index">首页</li>
-                <li bindtap="tap_about">简介</li>
-                <li bindtap="tap_product">开发</li>
-                <li bindtap="tap_join">加入我们</li>
-                <li bindtap="tap_contact">联系我们</li>
-                <li bindtap="tap_center">个人中心</li>
-            </ul>
+  </view> -->
+    <view class="id-card contain-module">
+        <text class="card-title title">身份证号查询小工具</text>
+        
+        <view class="mod_1b mod_lifebig">
+            <view class="mod_search_outer pt40">
+                <form>
+                    <view class="mod_search_inner clearfix">
+                        <input class="text num" type="idcard" name="userid" id="userid" maxlength="20" value="{{inputnum}}" placeholder="请输入身份证号（15位或18位）" bindinput="bindKeyInput"/>
+                        
+                    </view>
+                    <view>
+                    <button type="primary" class="input-btn" bindtap="check_idcard">查 询</button>
+                    </view>
+                </form>
+            </view>
+            <view class="num_area num_area_bg">
+                <!-- <view id="error" style="display: block; color: red; font-size: 14px;">身份证信息有误</view> -->
+                
+                <view class="mod_search_think" style="" id="info">
+                    <view class="text">号 码： <strong id="code">{{inputnum}}</strong> </view>
+                    <view class="text">地 区： <strong id="diqu">{{city}}</strong></view>
+                    <view class="text">生 日： <strong id="shengri">{{birthday}}</strong></view>
+                    <view class="text">性 别： <strong id="xingbie">{{sex}}</strong></view>
+                    <view></view>
+                </view>
+                <view class="mod_search_think" style="display:none;" id="e_info">
+                    <view class="text">你查询的是： <strong id="e_e_code"></strong> <font color="#FD5151">(最后一位校验码错误)</font></view>
+                    <view class="text">　正确号码： <strong id="e_code"></strong> <a href="" id="e_searchCode"></a></view>
+                    <view class="text">地区： <strong id="e_diqu"></strong></view>
+                    <view class="text">生日： <strong id="e_shengri"></strong></view>
+                    <view class="text">性别： <strong id="e_xingbie"></strong></view>
+                </view>
+            </view>
+            <view class="tip">
+                <text>备注：纯前端开发，不收集用户任何信息。</text>
+            </view>
         </view>
     </view>
-    <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? 'c-state1' : ''}}">
-        <view class="index-nav">
-            <image class="nav-menu-icon" bindtap="tap_ch" src="../../images/menu.png"></image>
-            <image class="userinfo-avatar index-company-logo" src="../../images/logo.jpg" background-size="cover"></image><span>之梦</span>
-        </view>
-        <view class="swiper">
-            <swiper indicator-active-color="{{dotactivecolor}}" indicator-dots="{{indicatorDots}}"
-              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-              <block wx:for="{{imgUrls}}">
-                <swiper-item>
-                  <image src="{{item}}" class="slide-image" width="355" height="150"/>
-                </swiper-item>
-              </block>
-            </swiper>
-        </view>
-        <view class="navbar-menu">
-            <ul>
-                <li class="li-menu-news" bindtap="redirect_news">
-                    <image src="../../images/news.png"></image>
-                    <p>新闻中心</p>
-                </li>
-                <li class="li-menu-product" bindtap="redirect_product">
-                    <image src="../../images/products.png"></image>
-                    <p>开发中心</p>
-                </li>
-                <li class="li-menu-join" bindtap="redirect_join">
-                    <image src="../../images/join.png"></image>
-                    <p>加入我们</p>
-                </li>
-                <li class="li-menu-contact" bindtap="redirect_contact">
-                    <image src="../../images/contact.png"></image>
-                    <p>联系我们</p>
-                </li>
-            </ul>
-        </view>
-        <view class="index-product index-container">
-            <view class="product-title index-common-title">
-                <text>开发展示</text>
+    <!-- 客服电话 -->
+    <view class="telephone contain-module">
+        <text class="tel-title title">客服服务电话查询小工具</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array.values}}">
+            <view class="picker text">
+              当前选择：{{array.values[index]}} <text class="sel-tip">(点击可选择)</text>
             </view>
-            <view class="contain-content product-content">
-                <ul class="product-ul">
-                    <li class="li-menu-news">
-                        <image src="../../images/shequ.png"></image>
-                        <p>互动社区</p>
-                    </li>
-                    <li class="li-menu-product">
-                        <image src="../../images/content.png"></image>
-                        <p>内容管理</p>
-                    </li>
-                    <li class="li-menu-join">
-                        <image src="../../images/shop.png"></image>
-                        <p>门店展示</p>
-                    </li>
-                    <li class="li-menu-contact">
-                        <image src="../../images/card.png"></image>
-                        <p>个人名片</p>
-                    </li>
-                </ul>
-                <button class=" index-more" bindtap="redirect_product">了解更多</button>
-            </view>
+            
+        </picker>
+        <view class="text tel-phone" >客服服务电话： <text id="e_diqu" class="phone-num" bindtap="tel_phone">{{telphone}}</text><text class="sel-tip" bindtap="tel_phone">(点击可拨打电话咨询)</text></view>
+        <view class="tip">
+            <text>备注：收集各大银行、支付平台官网客服热线，方便用户查询。</text>
         </view>
-        <view class="index-news index-container">
-            <view class="news-title index-common-title">
-                <text>新闻中心</text>
+    </view>
+    
+    <view class="delivery contain-module">
+        <text class="card-title title">快递查询小工具</text>
+        <view class="mod_1b mod_lifebig">
+            <view class="mod_search_outer pt40">
+                <form>
+                    <view class="mod_search_inner clearfix">
+                        <input class="text num" type="number" name="userid" id="userid" maxlength="30" value="{{inputnumber}}" placeholder="请输入运单号" bindinput="bindInputnum"/>
+                    </view>
+                    <picker bindchange="bindkuaidiChange" value="{{indexnum}}" range="{{kuaidi.values}}">
+                        <view class="picker text">
+                          当前选择：{{kuaidi.values[indexnum]}} <text class="sel-tip">(点击可选择)</text>
+                        </view>
+                        <input type="text" value="{{kuaidiname}}" style="display:none;"/>
+                    </picker>
+                    <view>
+                        <button type="primary" class="input-btn" bindtap="check_kuaidi">查 询</button>
+                    </view>
+                    <view wx:for="{{kuaidiinfo}}">
+                      <view class="info-li">{{item.context}}</view>
+                    </view>
+                </form>
+            </view> 
+        </view>
+    </view>
+    
+    <!-- 根据 IP 查城市位置 -->
+    <view class="ip-city contain-module">
+        <text class="card-title title">根据 IP 定位城市位置小工具</text>
+        <view class="mod_1b mod_lifebig">
+            <view class="mod_search_outer pt40">
+                <form>
+                    <view class="mod_search_inner clearfix">
+                        <input class="text num" type="digit" name="userid" id="userid" maxlength="20" value="{{inputip}}" placeholder="请输入 IP 地址" bindinput="bindIp"/>
+                        
+                    </view>
+                    <view>
+                    <button type="primary" class="input-btn" bindtap="check_ipcity">查 询</button>
+                    </view>
+                </form>
             </view>
-            <view class=" contain-content news-content">
-                <ul class="index-ul news-ul">
-                    <li>
-                        <view class="index-news-left">
-                            <image src="../../images/news_1.png"></image>
-                        </view>
-                        <view class="index-news-right">
-                            <text>2017.08.07晚计划子模块</text>
-                        </view>
-                    </li>
-                    <li>
-                        <view class="index-news-left">
-                            <image src="../../images/news_3.png"></image>
-                        </view>
-                        <view class="index-news-right">
-                            <text>2017.08.06晚完成首页全部</text>
-                        </view>
-                    </li>
+            <view class="num_area num_area_bg">
+                <view class="mod_search_think" style="" id="info">
+                    <view class="text">IP： <strong id="code">{{inputip}}</strong> </view>
+                    <!-- <view class="text">运营商： <strong id="code">{{ip_isp}}</strong> </view> -->
+                    <view class="text">地 区： <strong id="diqu">{{ip_country}} {{ip_region}} {{ip_city}}</strong></view>
                     
-                </ul>
-                <button class="index-more" bindtap="redirect_news">了解更多</button>
-            </view>
-        </view>
-        <view class="index-about index-container">
-            <view class="news-title index-common-title">
-                <text>关于我们</text>
-            </view>
-            <view class="contain-content about-content">
-               <view class="index-about-left">
-                    <image src="../../images/news.png"></image>
-               </view>
-               <view class="index-about-right">
-                    <text>web前端开发，网站建设、小程序开发,坚持学习、简单、专注、极致</text>
-               </view>
-               <button class="index-about-btn index-more" bindtap="redirect_about">了解更多</button>
-            </view>
-        </view>
-        <view class="index-contact index-container">
-            <view class="contact-title index-common-title">
-                <text>联系我们</text>
-            </view>
-            <view class=" contain-content contact-content">
-                
-                <view class="contact-us">
-                    <ul class="index-ul contact-us-ul">
-                        <li><text class="li-left">地址：</text><text class="li-right">浙江省杭州市西湖区翠苑街道塘苗路18号</text></li>
-                        <li><text class="li-left">邮箱：</text><text class="li-right">fairyilys@gmail.com</text></li>
-                        <li><text class="li-left">QQ：</text><text class="li-right">1503534781</text></li>
-                        <li><text class="li-left">联系方式：</text><text class="li-right">13003652699</text></li>
-                    </ul>
+                    <view></view>
                 </view>
-                <map id="map" longitude="120.12211" latitude="30.27455" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
             </view>
+            <view class="tip">
+                <text>备注：纯前端开发，不收集用户任何信息。</text>
+            </view>
+        </view>
+    </view>
 
+    <!-- 根据 手机号 查归属地 -->
+    <view class="ip-city contain-module">
+        <text class="card-title title">手机号归属地查询</text>
+        <view class="mod_1b mod_lifebig">
+            <view class="mod_search_outer pt40">
+                <form>
+                    <view class="mod_search_inner clearfix">
+                        <input class="text num" type="number" name="userid" id="userid" maxlength="20" value="{{inputphone}}" placeholder="请输入手机号码" bindinput="bindtelphone"/>
+                        
+                    </view>
+                    <view>
+                    <button type="primary" class="input-btn" bindtap="check_tel">查 询</button>
+                    </view>
+                </form>
+            </view>
+            <view class="num_area num_area_bg">
+                <view class="mod_search_think" style="" id="info">
+                    <view class="text">手机号： <strong id="code">{{inputphone}}</strong> </view>
+                    <!-- <view class="text">运营商： <strong id="code">{{ip_isp}}</strong> </view> -->
+                    <view class="text">归属地： <strong id="diqu">{{tel_position}} {{tel_city}} {{tel_operator
+}}</strong></view>
+                    
+                    <view class="text">邮政编码： <strong id="code">{{tel_zipcode}}</strong></view>
+                </view>
+            </view>
+            <view class="tip">
+                <text>备注：纯前端开发，不收集用户任何信息。</text>
+            </view>
         </view>
-        <!-- 客服 -->
-        <view class="serv">
-                <image src="../../images/wx-server.png"></image>
-                <contact-button 
-                  type="default-light" 
-                  size="27"
-                  session-from="weapp"
-                >
-                </contact-button>
+    </view>
+
+    <!-- 技术支持 -->
+    <view class="tecknoledge contain-module">
+        <view class="qcode">
+            <image src="../../images/qrcode-tool.jpg"></image>
         </view>
+
+        <text class="tel-title title">fairy提供技术支持</text>
+    </view>
+
+<!-- 客服 -->
+    <view class="serv">
+            <image src="../../images/wx-server.png"></image>
+            <contact-button 
+              type="default-light" 
+              size="27"
+              session-from="weapp"
+            >
+            </contact-button>
     </view>
 </view>
