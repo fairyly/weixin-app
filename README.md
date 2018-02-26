@@ -258,3 +258,13 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
   2. 开发者工具会打开一个文件夹，请删除这个文件夹下的所有文件；
   3. 关闭并重启开发者工具，看看这个问题是否还存在。
 ```
+
+* 设置微信小程序全屏,只保留右上角部分
+
+navigationStyle 只在 app.json 中生效。
+
+```
+"window":{
+  "navigationStyle": "custom"
+}
+```
