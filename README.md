@@ -9,6 +9,8 @@ hello  小程序
 
 * [微信小程序联盟](http://www.wxapp-union.com/)
 
+* [微信小程序自定义组件](https://github.com/skyvow/wux)
+
 * openToolsLog 查看开发工具日志
 
   - 任意聊天窗口输入 //uplog 会上传日志
