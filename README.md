@@ -277,3 +277,8 @@ navigationStyle 只在 app.json 中生效。
 ```
   word-break: breal-all;
 ```
+
+* tabbar 图片设置
+```
+60*60 内边距可以适当设置
+```
