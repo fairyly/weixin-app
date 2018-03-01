@@ -272,3 +272,8 @@ navigationStyle 只在 app.json 中生效。
   "navigationStyle": "custom"
 }
 ```
+
+* text 中数字不换行
+```
+  word-break: breal-all;
+```
