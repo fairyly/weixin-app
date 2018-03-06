@@ -287,4 +287,4 @@ navigationStyle 只在 app.json 中生效。
 * 小程序瀑布流
   - css 列布局: https://github.com/icindy/WxMasonry
   - 两列布局(分两个数组存,根据奇偶数判断分开 index%2 == 1): https://github.com/QShengW/wxApplet
-  - 监听所有图片加载高度,判断: https://github.com/zarknight/wx-falls-layout
+  - 监听所有图片加载高度,判断分成两数组: https://github.com/zarknight/wx-falls-layout
