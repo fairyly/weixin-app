@@ -31,6 +31,7 @@ hello  小程序
 
 * 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。 http://mpvue.com
   - https://github.com/Meituan-Dianping/mpvue
+  - doc: http://mpvue.com/mpvue/quickstart/
 
 
 * [微信小程序支付（java后端）](http://blog.csdn.net/qq_30641447/article/details/73222648)
