@@ -297,3 +297,24 @@ navigationStyle 只在 app.json 中生效。
   - css 列布局: https://github.com/icindy/WxMasonry
   - 两列布局(分两个数组存,根据奇偶数判断分开 index%2 == 1): https://github.com/QShengW/wxApplet
   - 监听所有图片加载高度,判断分成两数组: https://github.com/zarknight/wx-falls-layout
+
+
+* 边框压缩 0.5px
+
+```
+.weui-btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+```
