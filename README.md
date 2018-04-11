@@ -292,6 +292,23 @@ navigationStyle 只在 app.json 中生效。
 60*60 内边距可以适当设置
 ```
 
+* 小程序中文本内换行
+```
+\r\n   
+
+useTip: {
+    	show: false,
+      title: "确认使用该卡券?",
+      content: "该卡券不是叠加卡券\n使用后单品折扣及会员折扣将失效",
+      showIcon: false,
+      showCancel: true,
+      cancelText: "不使用",
+      cancelFuncName: 'toCancelUse',
+      confirmText: "知道了",
+      confirmFuncName: 'useCoupe',
+
+    },
+```
 
 * 小程序瀑布流
   - css 列布局: https://github.com/icindy/WxMasonry
