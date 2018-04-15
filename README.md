@@ -34,10 +34,12 @@ hello  小程序
   - doc: http://mpvue.com/mpvue/quickstart/
 
 
-* 微信小程序图标插件
+* 微信小程序图表插件
   - echarts-for-weixin: https://github.com/ecomfe/echarts-for-weixin
   - wx-charts: https://github.com/xiaolin3303/wx-charts
 
+* wemark - 微信小程序Markdown渲染库
+  - https://github.com/TooBug/wemark
 
 * [微信小程序支付（java后端）](http://blog.csdn.net/qq_30641447/article/details/73222648)
 
