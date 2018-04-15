@@ -40,6 +40,8 @@ hello  小程序
 
 * wemark - 微信小程序Markdown渲染库
   - https://github.com/TooBug/wemark
+  - wxParse-微信小程序富文本解析自定义组件，支持HTML及markdown解析 http://weappdev.com/
+  - https://github.com/icindy/wxParse
 
 * [微信小程序支付（java后端）](http://blog.csdn.net/qq_30641447/article/details/73222648)
 
