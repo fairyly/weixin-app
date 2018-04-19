@@ -51,6 +51,8 @@ hello  小程序
     前端地址：https://github.com/xupp/xiaochengxu  
   - [小程序支付详解+源码(客户端+服务端)](http://www.wxapp-union.com/article-2516-1.html)
 
+* 【小程序】CNode社区: https://github.com/bowencool/mpvue-cnode
+
 * 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
 * 关键字(需要在双引号之内)
