@@ -53,6 +53,10 @@ hello  小程序
 
 * 【小程序】CNode社区: https://github.com/bowencool/mpvue-cnode
 
+* 基于 Vue.js 的小程序开发框架
+  - github: https://github.com/Meituan-Dianping/mpvue
+  - doc: http://mpvue.com/mpvue/quickstart/
+
 * 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
 * 关键字(需要在双引号之内)
