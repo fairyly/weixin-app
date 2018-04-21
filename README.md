@@ -278,10 +278,19 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
   手机上没有出现
   
 * 小程序弹窗禁止底部内容滚动 
+
   ```
   catchtouchmove="preventTouchMove"
-  为什么是空方法？因为要结合界面wxml看，蒙层view里有一个事件绑定catchtouchmove="preventTouchMove"。这样写的原因是阻断事件向下传递，避免在弹窗后还  可以点击或者滑动蒙层下的界面
+  为什么是空方法？因为要结合界面wxml看，蒙层view里有一个事件绑定catchtouchmove="preventTouchMove"。
+  这样写的原因是阻断事件向下传递，避免在弹窗后还   可以点击或者滑动蒙层下的界面
   ```
+  
+* 阻止事件冒泡
+
+```
+    
+```
+
 * wxss 失效？请尝试以下操作：
 ```
   1. 在开发者工具调试器中输入openVendor并回车；
@@ -310,6 +319,7 @@ navigationStyle 只在 app.json 中生效。
 ```
 
 * 小程序中文本内换行
+
 ```
 \r\n   
 
@@ -354,4 +364,5 @@ useTip: {
 ```
 
 
-* 在一页中上部固定,下部滚动,采用相对定位方式,上部高度固定,下部滚动区域高度根据(可用窗口高度)减去(上部高度),ios表现正常,Android会出现底部滚动高度会大于高{(可用窗口高度)减去(上部高度)},目前底部用swiper 和 scroll-view
+* 在一页中上部固定,下部滚动,采用相对定位方式,上部高度固定,下部滚动区域高度根据(可用窗口高度)减去(上部高度),  
+ios表现正常,Android会出现底部滚动高度会大于高{(可用窗口高度)减去(上部高度)},目前底部用swiper 和 scroll-view
