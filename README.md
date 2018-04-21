@@ -95,10 +95,8 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
   var gend = "babyInfo2["+index+"].gender";
   that.setData({
     [gend]: 2
-  })
-  
+  })  
   or
-  
   this.setData({
     'array[0].text':'changed data',
     'object.text': 'changed data'
