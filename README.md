@@ -92,14 +92,13 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
         "gender": 2
       },
     ]
-    
   var gend = "babyInfo2["+index+"].gender";
   that.setData({
     [gend]: 2
   })
-  
-  或者
   
+  or
+  
   this.setData({
     'array[0].text':'changed data',
     'object.text': 'changed data'
@@ -122,12 +121,14 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
 * 页面参数传递方法  
 
   - 跳转 带参数使用 ?  
+    ```
     wx.navigateTo({url:'/pages/xiangqing/xiangqing?id=上一页的参数'}) 
     onLoad:function(options){   
      // 页面初始化 options为页面跳转所带来的参数   
      this.setData({   
         title:options.id   
      })   
+     ```
   - wx.setStorage 或者 wx.serStorageSync
   - 
 
