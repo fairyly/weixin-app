@@ -288,7 +288,7 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
 * 阻止事件冒泡
 
 ```
-    
+   catchtap="handle"
 ```
 
 * wxss 失效？请尝试以下操作：
