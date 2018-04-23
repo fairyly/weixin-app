@@ -365,4 +365,21 @@ useTip: {
 ios表现正常,Android会出现底部滚动高度会大于高{(可用窗口高度)减去(上部高度)},目前底部用swiper 和 scroll-view
 
 
-* ios 中多个 button
+* ios 中多个 button 一行显示使用 padding 中如果有 em,会遮挡边框,边框压缩写法
+```
+.weui-btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+```
