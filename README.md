@@ -151,7 +151,6 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
   e.currentTarget.dataset.xxx  
 
 * 微信小程序图片实现宽度100%，高度自适应,mode 有 13 种模式，其中 4 种是缩放模式，9 种是裁剪模式。
-
   ```
   <image src='/images/store-pic.png' style='width:100%;' mode="widthFix"></image>
   图片在一个区域内等比例显示
