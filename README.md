@@ -156,8 +156,8 @@ onReachBottomDistance	Number	50	页面上拉触底事件触发时距页面底部
   图片在一个区域内等比例显示
   <image data-proid='{{item.proId}}' mode="aspectFit" src='/images/imgs.png'></image>
   {
-    max-width:
-    max-width:
+    max-width:
+    max-width:
   }
   ```
 
