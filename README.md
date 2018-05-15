@@ -51,6 +51,9 @@ hello  小程序
   - [小程序支付详解+源码(客户端+服务端)](http://www.wxapp-union.com/article-2516-1.html)
 
 * 【小程序】CNode社区: https://github.com/bowencool/mpvue-cnode
+* wxCNode
+- 小程序版 CNode 社区
+- github https://github.com/web-L/wxCNode
 
 * 基于 Vue.js 的小程序开发框架
   - github: https://github.com/Meituan-Dianping/mpvue
