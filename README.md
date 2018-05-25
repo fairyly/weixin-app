@@ -385,3 +385,8 @@ ios表现正常,Android会出现底部滚动高度会大于高{(可用窗口高�
     border-radius: 10px;
 }
 ```
+
+- 某些手机 textarea 呼不出键盘
+```
+设置个属性 fixed=true 
+```
