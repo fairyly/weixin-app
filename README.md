@@ -8,6 +8,8 @@ hello  小程序
 
 * [微信小程序联盟](http://www.wxapp-union.com/)
 
+* 微信小程序wepy框架开发资源汇总: https://github.com/aben1188/awesome-wepy
+
 ==========================================
 
 * [微信小程序自定义组件集合](https://github.com/skyvow/wux)
