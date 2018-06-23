@@ -63,6 +63,12 @@ hello  小程序
   - github: https://github.com/Meituan-Dianping/mpvue
   - doc: http://mpvue.com/mpvue/quickstart/
 
+* 小程序、小游戏以及 Web 通用 Canvas 渲染引擎
+- cax： https://github.com/dntzhang/cax
+
+
+
+
 * 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
 * 关键字(需要在双引号之内)
