@@ -68,6 +68,8 @@ hello  小程序
 
 
 
+- 一款答题小程序
+  - https://github.com/fairyly/Kuai-Shua-Questions
 
 * 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
