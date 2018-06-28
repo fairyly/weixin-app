@@ -1,0 +1,10 @@
+# ios flex
+
+```
+display: flex;
+display: -webkit-flex; 
+justify-content: center;
+-webkit-justify-content: center;
+align-items:center;
+-webkit-align-items: center;
+````
