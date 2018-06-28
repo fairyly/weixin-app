@@ -27,17 +27,21 @@ align-items:center;
       </view>
       
       
-.member-menu-section .section-contain {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap : wrap;
-}
 .member-menu-section .menu-row {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 38rpx 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.member-menu-section .row-cell {
+  position: relative;
+  /* flex: 1; */
+  text-align:center;
+  min-width: 33.333333%;
   padding: 38rpx 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
