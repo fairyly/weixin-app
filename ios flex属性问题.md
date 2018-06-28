@@ -47,5 +47,5 @@ align-items:center;
   box-sizing: border-box;
 }
 
-最后给 `row-cell`加个宽度 根据屏幕宽度计算 ` wx.getSystemSync().windowWidth / 3+ 'px'`
+最后给 `row-cell`加个宽度 根据屏幕宽度计算 ` wx.getSystemInfoSync().windowWidth / 3+ 'px'`
 ```
