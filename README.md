@@ -70,6 +70,32 @@ hello  小程序
 
 - 一款答题小程序
   - https://github.com/fairyly/Kuai-Shua-Questions
+  
+  
+- 请求 异步封装
+  - https://github.com/jirengu/weixin-weather/blob/master/utils/api.js
+  ```
+  function getNowWeather(cityid){
+    return new Promise((resolve, reject)=>{
+      wx.request({
+        url: 'https://weixin.jirengu.com/weather/now',
+        data: {
+          cityid
+        },
+        success (res) {
+          if(res.data && res.data.status && res.data.status === 'OK' && res.data.weather[0]){
+            resolve(res.data.weather[0])
+          }else {
+            reject({status: 'error', msg: '获取天气失败'})
+          }
+        },
+        fail (){
+          reject({status: 'error', msg: '获取天气失败'})
+        }
+      })
+    })
+  }
+  ```
 
 * 数据绑定使用 **Mustache** 语法（双大括号）将变量包起来
   
