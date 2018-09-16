@@ -1,1 +1,6 @@
 *swp
+*/node_modules
+
+/node_modules
+
+cloud/functions/parseNameCard/node_modules
