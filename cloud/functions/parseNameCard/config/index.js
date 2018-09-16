@@ -1,5 +1,5 @@
 module.exports = {
-  AppId: '1252909946',
-  SecretId: 'AKIDESkxeK9GTUYr45JglfOvHWcXGPURwtT1',
-  SecretKey: 'Wr0z6oMlz63EJD0jMnASnMp8SgXHsHWg'
+  AppId: '腾讯云私钥 AppId',
+  SecretId: '腾讯云私钥 SecretId',
+  SecretKey: '腾讯云私钥 SecretKey'
 };
