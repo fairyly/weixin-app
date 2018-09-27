@@ -427,4 +427,13 @@ ios表现正常,Android会出现底部滚动高度会大于高{(可用窗口高�
 - 某些手机 textarea 呼不出键盘
 ```
 设置个属性 fixed=true 
+
+这么设置后有些手机出现了 textarea 固定
+```
+
+- flex 和 canvas 同时存在的时候问题
+```
+canvas 会自动向上漂
+
+最后 flex 外层有又加一层
 ```
