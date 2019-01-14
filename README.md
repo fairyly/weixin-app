@@ -437,3 +437,11 @@ canvas 会自动向上漂
 
 最后 flex 外层有又加一层
 ```
+
+- view标签里只有image标签时，底部会多出8px的边距
+
+```
+vertical-align: top;
+or
+vertical-align: bottom; 给图片加上这个样式
+```
