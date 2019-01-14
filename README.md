@@ -444,4 +444,7 @@ canvas 会自动向上漂
 vertical-align: top;
 or
 vertical-align: bottom; 给图片加上这个样式
+
+# 如果可以设置 view 样式
+line-height: 1;
 ```
