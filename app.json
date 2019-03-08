@@ -1,6 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/juejin/juejin",
+    "pages/juejin-detail/juejin-detail",
+    "pages/cnode/cnode",
+    "pages/node-detail/node-detail",
     "pages/logs/logs"
   ],
   "window":{
@@ -8,5 +12,27 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "之梦工具集",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nodejs.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/juejin/juejin",
+        "text": "掘金",
+        "iconPath": "images/juejin.png",
+        "selectedIconPath": "images/juejin-active.png"
+      },
+      {
+        "pagePath": "pages/cnode/cnode",
+        "text": "NodeJS",
+        "iconPath": "images/nodejs.png",
+        "selectedIconPath": "images/nodejs-active.png"
+      }
+    ]
   }
 }
