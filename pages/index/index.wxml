@@ -19,7 +19,6 @@
                 <form>
                     <view class="mod_search_inner clearfix">
                         <input class="text num" type="idcard" name="userid" id="userid" maxlength="20" value="{{inputnum}}" placeholder="请输入身份证号（15位或18位）" bindinput="bindKeyInput"/>
-                        
                     </view>
                     <view>
                     <button type="primary" class="input-btn" bindtap="check_idcard">查 询</button>
@@ -56,7 +55,6 @@
             <view class="picker text">
               当前选择：{{array.values[index]}} <text class="sel-tip">(点击可选择)</text>
             </view>
-            
         </picker>
         <view class="text tel-phone" >客服服务电话： <text id="e_diqu" class="phone-num" bindtap="tel_phone">{{telphone}}</text><text class="sel-tip" bindtap="tel_phone">(点击可拨打电话咨询)</text></view>
         <view class="tip">
@@ -81,7 +79,7 @@
                     <view>
                         <button type="primary" class="input-btn" bindtap="check_kuaidi">查 询</button>
                     </view>
-                    <view wx:for="{{kuaidiinfo}}">
+                    <view wx:for="{{kuaidiinfo}}" wx:key="index">
                       <view class="info-li">{{item.context}}</view>
                     </view>
                 </form>
