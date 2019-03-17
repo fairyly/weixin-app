@@ -10,8 +10,8 @@
     <!-- 这里data中article为bindName -->
     <template is="wxParse" data="{{ wxParseData: htmlContent.nodes }}"/>
 
-    <view class="reply-content" a:if="{{!!allData.replies.length }}">
-      <view class="reply-cell" a:for="{{ allData.replies }}" a:for-index="index" >
+    <view class="reply-content" wx:if="{{!!allData.replies.length }}">
+      <view class="reply-cell" wx:for="{{ allData.replies }}" a:for-index="index" >
         <view class="user-info">
           <image class="user-photo" mode="aspectFit" src="{{ item.author.avatar_url }}"></image>
           <text class="usr-name">{{ item.author.loginname }}</text>

@@ -51,9 +51,9 @@ Page({
     let baseUrl = 'https://timeline-merger-ms.juejin.im';
     let param = {
       src: 'web',
-      uid: '583fb57961ff4b006c196339',
-      device_id: '1549798177984',
-      token: 'eyJhY2Nlc3NfdG9rZW4iOiJCcjVpd2lsYlBHSlBnc3BnIiwicmVmcmVzaF90b2tlbiI6Ik5ZaTBha1dlTGNTRkVOMmkiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D',
+      uid: '',
+      device_id: '',
+      token: '',
       limit: '20',
       category: '5562b415e4b00c57d9b94ac8'
     }
