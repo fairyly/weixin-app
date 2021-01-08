@@ -3,6 +3,13 @@ wxApp
 
 >
 
+## 开发小程序框架
+
+- [ustjavac/awesome-wechat-weapp](https://github.com/justjavac/awesome-wechat-weapp)
+
+- [Tencent/wepy](https://github.com/Tencent/wepy)
+  - [docs](https://wepyjs.gitee.io/wepy-docs/)
+  - [aben1188/awesome-wepy](https://github.com/aben1188/awesome-wepy)
 
 >  
 ## issue
