@@ -7,9 +7,18 @@ wxApp
 
 - [ustjavac/awesome-wechat-weapp](https://github.com/justjavac/awesome-wechat-weapp)
 
-- [Tencent/wepy](https://github.com/Tencent/wepy)
+- 组件化开发框架：[Tencent/wepy](https://github.com/Tencent/wepy)
   - [docs](https://wepyjs.gitee.io/wepy-docs/)
   - [aben1188/awesome-wepy](https://github.com/aben1188/awesome-wepy)
+  
+  
+  
+- [Taro](https://github.com/NervJS/taro) - 使用 React 的方式开发小程序的框架，同时支持生成多端应用
+- [uni-app](https://github.com/dcloudio/uni-app) - 使用 Vue 语法开发小程序、H5、App的统一框架
+- [mpvue](https://github.com/Meituan-Dianping/mpvue) - 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系
+- [chameleon](https://github.com/didi/chameleon) - 一套代码运行多端，一端所见即多端所见
+- [kbone](https://github.com/wechat-miniprogram/kbone) - Web 与小程序同构解决方案
+
 
 >  
 ## issue
