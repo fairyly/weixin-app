@@ -5,7 +5,7 @@ wxApp
 
 ## 1.开发小程序框架
 
-- [ustjavac/awesome-wechat-weapp](https://github.com/justjavac/awesome-wechat-weapp)
+- [justjavac/awesome-wechat-weapp](https://github.com/justjavac/awesome-wechat-weapp)
 
 - 组件化开发框架：[Tencent/wepy](https://github.com/Tencent/wepy)
   - [docs](https://wepyjs.gitee.io/wepy-docs/)
