@@ -29,6 +29,8 @@ wxApp
 
 - [TalkingData/iview-weapp](https://github.com/TalkingData/iview-weapp)
 
+- [Wux Weapp](https://github.com/wux-weapp/wux-weapp/)
+
 - [微信小程序UI组件库合集](https://developers.weixin.qq.com/community/develop/article/doc/000ecc775a86807f7ba9b7dc956c13?highline=UI)
 
 
